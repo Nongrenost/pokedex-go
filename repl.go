@@ -5,12 +5,8 @@ import (
 )
 
 func cleanInput(text string) []string {
-    // split by whitespaces
-	//lowercase
-	//trim leading or trailing whitespace
 
-	trimmed := strings.TrimSpace(text)
-	lowered := strings.ToLower(trimmed)
+	lowered := strings.ToLower(text)
 	splitted := strings.Fields(lowered)
 
 	return splitted
