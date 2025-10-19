@@ -16,9 +16,19 @@ func main() {
 		if scanner.Scan() {
 			input = scanner.Text()
 		}
+		
+		command := cleanInput(input)[0]
+		//fmt.Printf("Your command was: %s\n", firstWord)
 
-		firstWord := cleanInput(input)[0]
-		fmt.Printf("Your command was: %s\n", firstWord)
+
+		if command == "exit"{
+			supportedCommands[command].callback()
+		}
+
+		if command == "help"{
+			supportedCommands[command].callback()
+		}
+		
 	}
 }
 
